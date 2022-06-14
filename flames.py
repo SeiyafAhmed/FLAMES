@@ -54,11 +54,11 @@ def flames(boy="", girl=""):
         boy.remove(" ")
     while " " in girl:
         girl.remove(" ")
-    for i in boy:
+    for i in boy.copy():
         if i in girl:
             boy.remove(i)
             girl.remove(i)
-    for i in girl:
+    for i in girl.copy():
         if i in boy:
             boy.remove(i)
             girl.remove(i)
